@@ -36,7 +36,7 @@
 					<td><input type="text" name="address" /></td>
 				</tr>
 				<tr>
-					<td>Contect No:</td>
+					<td>Contact No:</td>
 					<td><input type="text" name="number" /></td>
 				</tr>
 			</table>

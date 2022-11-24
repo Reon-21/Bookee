@@ -1,11 +1,14 @@
 package com.dvops.maven.eclipse;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
 
 /**
  * Servlet implementation class RegisterServlet
@@ -35,7 +38,23 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String role = request.getParameter("role");
+		String email = request.getParameter("email");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String address = request.getParameter("address");
+		String contact_no = request.getParameter("number");
+		
+		if(role.isEmpty()||email.isEmpty()||username.isEmpty()||password.isEmpty()||address.isEmpty()||contact_no.isEmpty()) {
+			RequestDispatcher req = request.getRequestDispatcher("register.jsp");
+			req.include(request, response);
+		}else {
+			PrintWriter writer = response.getWriter();
+			writer.println("<h1>Hello " + username + "</h1>");
+			writer.close();
+			doGet(request, response);
+		}
+		
 	}
 
 }
