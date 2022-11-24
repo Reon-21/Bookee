@@ -10,7 +10,7 @@
 <body>
 	<div align="center">
 		<h1 style="color: lightsalmon">Registration Form</h1>
-		<form action"RegisterServlet" method="post">
+		<form action="RegisterServlet" method="post">
 			<table style="with: 70%">
 				<tr>
 					<td>Role:</td>
@@ -40,7 +40,7 @@
 					<td><input type="text" name="number" /></td>
 				</tr>
 			</table>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit"/>
 		</form>
 
 	</div>
