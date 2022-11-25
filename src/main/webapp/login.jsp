@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sign In</title>
 <style>
 * {
 	box-sizing: border-box;
@@ -23,8 +23,10 @@ body {
 
 h1 {
 	font-weight: bold;
-	margin: 0;
+	margin: 20px;
 }
+
+
 
 h2 {
 	text-align: center;
@@ -42,20 +44,22 @@ span {
 	font-size: 12px;
 }
 
-a {
-	color: rgb(210, 95, 220);
-	font-weight: bold;
-	font-size: 14px;
+#Forgot {
+	background: -webkit-linear-gradient(#FF4B2B, #FF416C);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-size: 11px;
 	text-decoration: none;
-	margin: 15px 0;
+	margin-right: -155px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	
 }
 
-button {
+#buttonSignup {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-  	background: -webkit-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
-  	background: -o-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
-  	background: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+	border: 2px solid #FFFFFF;
+  	background: white;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -65,15 +69,44 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+#buttonSignup:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+#buttonSignup:focus {
 	outline: none;
 }
 
-button.ghost {
+#buttonSignup.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+#buttonLogin {
+ 	background: linear-gradient(to right, #FF4B2B, #FF416C)!important;
+    color: white !important;
+    box-shadow: none !important;
+	border-radius: 20px;
+	border: 2px solid #FFFFFF;
+  	background: white;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#buttonLogin:active {
+	transform: scale(0.95);
+}
+
+#buttonLogin:focus {
+	outline: none;
+}
+
+#buttonLogin.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
@@ -259,16 +292,18 @@ footer a {
 				<h1>Sign in</h1>
 				 <input type="text" name="username" placeholder = "Username" size="20" /> 
 				 <input type="password" name="password" placeholder = "Password" size="20" />
-				  <a href="#">Forgot your password?</a>
-				<button type="submit">Login</button>
+				  <a id ="Forgot" href="#">Forgot your password?</a>
+				<button id="buttonLogin" type="submit"></a>Sign In</button>
 			</form>
 		</div>
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
-					<h1>Hello, Welcome to Bookee!</h1>
-					<p>Enter your personal details and start your hotel bookee journey with us!</p>
-					<button class="ghost" id="signUp">Sign Up</button>
+					<h1>Welcome back to Bookee!</h1>
+					<p>Don't have a Bookee account yet?</p>
+					<a href="http://localhost:8091/Bookee/register.jsp" >
+					<button class="ghost" id="buttonSignup">Sign Up</button>
+					</a>
 				</div>
 			</div>
 		</div>
