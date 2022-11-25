@@ -42,10 +42,8 @@ public class RegisterServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		String address = request.getParameter("address");
-		String contact_no = request.getParameter("number");
 		
-		if(role.isEmpty()||email.isEmpty()||username.isEmpty()||password.isEmpty()||address.isEmpty()||contact_no.isEmpty()) {
+		if(role.isEmpty()||email.isEmpty()||username.isEmpty()||password.isEmpty()) {
 			RequestDispatcher req = request.getRequestDispatcher("register.jsp");
 			req.include(request, response);
 		}else {
