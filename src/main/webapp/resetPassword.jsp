@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>An email token has been sent!</h1>
-<input type="text" name="token" placeholder="Token" size="20" />
-<button type="submit" >Submit</button>
+	<div class="form-container sign-in-container">
+		<form action="ResetPasswordServlet" method="post">
+			<h1>An email token has been sent! Check your email!</h1>
+			<input type="text" name="token" placeholder="Token" size="20" />
+			<input type="password" name="newPassword" placeholder="New Password" size="20" />
+			<button id="buttonLogin" type="submit">
+				<a>Change Password</a>
+			</button>
+		</form>
 </body>
 </html>
