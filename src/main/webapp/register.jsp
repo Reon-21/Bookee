@@ -530,6 +530,7 @@ menu
 <body>
 	<div class="container" id="container">
 		<div class="form-container sign-in-container">
+		
 			<form action="RegisterServlet" method="post">
 				<h1>Sign up</h1>
 				<input type="email" name="email" placeholder="Email" size="20">

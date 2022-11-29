@@ -292,7 +292,7 @@ footer a {
 				<h1>Sign in</h1>
 				 <input type="text" name="username" placeholder = "Username" size="20" /> 
 				 <input type="password" name="password" placeholder = "Password" size="20" />
-				  <a id ="Forgot" href="#">Forgot your password?</a>
+				  <a id ="Forgot" href="http://localhost:8091/Bookee/forgetPassword.jsp">Forgot your password?</a>
 				<button id="buttonLogin" type="submit"></a>Sign In</button>
 			</form>
 		</div>
