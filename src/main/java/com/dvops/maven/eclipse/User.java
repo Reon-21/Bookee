@@ -12,6 +12,7 @@ public class User {
 		this.profilePicture = profilePicture;
 		this.email = email;
 		this.username = username;
+		this.password = password;
 		this.role = role;
 		this.address = address;
 	}
