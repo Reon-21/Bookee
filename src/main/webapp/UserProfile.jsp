@@ -158,10 +158,10 @@ border-radius: 50%;
   </button>
       <ul class="navbar-nav w-100 justify-content-center">
           <li class="nav-item">
-              <a class="nav-link" routerLink="/inventory">Hotels</a>
+              <a class="nav-link">Hotels</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" routerLink="/analysis">Dashboard</a>
+              <a class="nav-link">Dashboard</a>
           </li>
       </ul>
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
