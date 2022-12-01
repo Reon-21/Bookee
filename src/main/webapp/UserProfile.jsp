@@ -15,7 +15,7 @@ body {
 }
 
 .main-body {
-	padding: 15px;
+	padding: 5px;
 }
 
 .card {
@@ -33,12 +33,13 @@ body {
 	background-clip: border-box;
 	border: 0 solid rgba(0, 0, 0, .125);
 	border-radius: .25rem;
+	margin-top: 130px;
 }
 
 .card-body {
 	flex: 1 1 auto;
 	padding: 1rem;
-	height: 375px;
+	height: 383px;
 }
 
 .gutters-sm {
@@ -70,36 +71,6 @@ body {
 }
 
 .profile-button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
-}
-
-.edit-button{
-   	background: linear-gradient(to right, #FF4B2B, #FF416C)!important;
-    color: white !important;
-    box-shadow: none !important;
-	border-radius: 20px;
-	border: 2px solid #FFFFFF;
-  	background: white;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 5px 15px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-}
-
-.edit-button:active {
-   transform: scale(0.95);
-}
-
-
-.edit-button:focus {
-	outline: none;
-}
-
-.edit-button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
@@ -139,10 +110,10 @@ body {
 	height: 30px;
 }
 
-img{
-border-radius: 50%;
-}
 
+.card-bodyProfile{
+	height: 383px;
+}
 
 
 
@@ -151,7 +122,7 @@ border-radius: 50%;
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center">
-  <a routerLink="/" class="navbar-brand d-flex w-50 mr-auto"><img src="assets/images/exdanote_logo.png" alt="Exdanote Logo" style="max-width: 100%; width: 160px;"></a>
+  <a class="navbar-brand d-flex w-50 mr-auto"><img src= "images/BookeeLogo.png" style="max-width: 100%; width: 160px;"></a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
       <span class="navbar-toggler-icon"></span>
@@ -179,12 +150,12 @@ border-radius: 50%;
   </div>
           <li class="nav-item">
           	<a href="http://localhost:8091/Bookee/login.jsp">
-            <button type="button" class="btn btn-outline-dark" style="margin-right: 10px;" routerLink="/login">Login</button>
+            <button type="button" class="btn btn-outline-dark" style="margin-right: 10px;">Login</button>
              </a>
           </li>
           <li class="nav-item">
           		<a href="http://localhost:8091/Bookee/register.jsp">
-            <button type="button" class="btn btn-dark" routerLink="/signUp">Sign up</button>
+            <button type="button" class="btn btn-dark">Sign up</button>
             </a>
           </li>
       </ul>
@@ -195,14 +166,18 @@ border-radius: 50%;
 			<div class="row gutters-sm">
 				<div class="col-md-4 mb-3">
 					<div class="card">
-						<div class="card-body">
+						<div class="card-bodyProfile">
 							<div class="d-flex flex-column align-items-center text-center">
-								<img src="https://www.nicepng.com/png/detail/115-1150821_default-avatar-comments-sign-in-icon-png.png"
-									alt="Admin" width="150">
-								<div class="mt-3">
+								<div style="position: relative;">
+								<div style= "background-image: linear-gradient(to right, rgba(255,75,43,1), rgba(255,65,108,1)); width: 35px; height: 35px; position: absolute; bottom: 0; margin-left: 100px; border-radius: 25px;">
+									<img src ="images/pencil.png" style="max-width: 100%; height: 16px; margin-top: 5px;">
+								</div>
+								<img src="https://www.nicepng.com/png/detail/115-1150821_default-avatar-comments-sign-in-icon-png.png" alt="Admin" style="margin-top: 50px; width: 150px; display: block; border-radius: 100px;"/>
+									</div>
+									<div class="mt-3">
 									<h4>John Doe</h4>
 									<p class="text-secondary mb-1">Hotel Owner</p>
-							 		<button type="button" class="edit-button" data-toggle="modal" data-target="#exampleModal"> Change Avatar </button>
+							 		<button type="button" class="delete-button"  data-toggle="modal" data-target="#exampleModal"> Delete Account </button>
 								</div>
 							</div>
 						</div>
@@ -215,7 +190,7 @@ border-radius: 50%;
 								<div class="col-sm-3">
 									<h6 class="mb-0">Name</h6>
 								</div>
-								 <div class="col-md-5"><input type="text" class="form-control" placeholder="John" value=""> <button type="button" class="btn btn-danger" style="margin-left : 280px; margin-top: -70px;">Delete</button>
+								 <div class="col-md-5"><input type="text" class="form-control" placeholder="John" value="">
 								 </div>
 							</div>
 							<hr>
@@ -235,15 +210,14 @@ border-radius: 50%;
 							<hr>
 							<div class="row">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Role</h6>
+									<h6 class="mb-0">Address</h6>
 								</div>
-								 <div class="col-md-5"><input type="text" class="form-control" value="" placeholder="Owner"></div>
+								 <div class="col-md-5"><input type="text" class="form-control" value="" placeholder="Address"></div>
 							</div>
 							<hr>
 							<div class="row">
-								<button type="button" class="btn btn-success" style="margin-left: 300px;">Update profile</button>
+								<button type="button" class="btn btn-success" style="margin-left: 300px; margin-top: 1px; text-align: center; ">Update profile</button>
 								</div>
 							</div>
-							<hr>
 </body>
 </html>
