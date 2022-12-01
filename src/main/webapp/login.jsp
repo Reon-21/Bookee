@@ -290,7 +290,7 @@ footer a {
 		<div class="form-container sign-in-container">
 			<form action="AuthenticateServlet" method="post">
 				<h1>Sign in</h1>
-				 <input type="text" name="username" placeholder = "Username" size="20" /> 
+				 <input type="email" name="email" placeholder = "E-mail" size="20" /> 
 				 <input type="password" name="password" placeholder = "Password" size="20" />
 				  <a id ="Forgot" href="#">Forgot your password?</a>
 				<button id="buttonLogin" type="submit"></a>Sign In</button>
@@ -301,7 +301,7 @@ footer a {
 				<div class="overlay-panel overlay-right">
 					<h1>Welcome back to Bookee!</h1>
 					<p>Don't have a Bookee account yet?</p>
-					<a href="http://localhost:8091/Bookee/register.jsp" >
+					<a href="http://localhost:8091/Bookee/register.jsp">
 					<button class="ghost" id="buttonSignup">Sign Up</button>
 					</a>
 				</div>

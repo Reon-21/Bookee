@@ -37,7 +37,7 @@ public class AuthenticateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String Username = request.getParameter("username");
+		String Username = request.getParameter("email");
 		String Password = request.getParameter("password");
 		String correctUsername = "John";
 		String correctPassword = "123";
