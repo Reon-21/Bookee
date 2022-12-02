@@ -59,6 +59,18 @@ public class AuthenticateServlet extends HttpServlet {
 		if(login) {
 			session.setAttribute("loggedInEmail", email.toString());
 			session.setAttribute("loggedInRole", role.toString());
+			
+			if(role.equals("customer")) {
+				writer.println("<script type=\"text/javascript\">");
+			    writer.println("window.location.href = 'http://localhost:8091/Bookee/hotels.jsp';");
+			    writer.println("</script>");
+			}
+			else if (role.equals("hotelowner")) {
+				writer.println("<script type=\"text/javascript\">");
+			    writer.println("window.location.href = 'http://localhost:8091/Bookee/dashboard.jsp';");
+			    writer.println("</script>");
+			}
+			
 		}
 		else {
 			writer.println("<script type=\"text/javascript\">");
