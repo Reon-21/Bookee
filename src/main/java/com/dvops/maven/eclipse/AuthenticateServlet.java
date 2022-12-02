@@ -2,12 +2,14 @@ package com.dvops.maven.eclipse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class AuthenticateServlet
@@ -37,19 +39,35 @@ public class AuthenticateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String Username = request.getParameter("email");
-		String Password = request.getParameter("password");
-		String correctUsername = "John";
-		String correctPassword = "123";
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		String role = "";
 		
-		if(Username.compareTo(correctUsername) == 0 && Password.compareTo(correctPassword) == 0) {
-			PrintWriter writer = response.getWriter();
-			writer.println("<h1>Welcome " + Username + "</h1>");
-		} else {
-			PrintWriter writer = response.getWriter();
-			writer.println("Incorrect username and password");
+		HttpSession session = request.getSession();
+		PrintWriter writer = response.getWriter();
+		ArrayList<User> registeredUserList = (ArrayList)session.getAttribute("users");
+		boolean login = false;
+		
+		for(int i = 0; i < registeredUserList.size(); i++) {
+			if(registeredUserList.get(i).getEmail().toString().equals(email) && registeredUserList.get(i).getPassword().toString().equals(password)) {
+				login = true;
+				role = registeredUserList.get(i).getRole().toString();
+				break;
+			}
 		}
-		doGet(request, response);
+		
+		if(login) {
+			session.setAttribute("loggedInEmail", email.toString());
+			session.setAttribute("loggedInRole", role.toString());
+		}
+		else {
+			writer.println("<script type=\"text/javascript\">");
+		    writer.println("alert('Incorrect email or password');");
+		    writer.println("window.location.href = 'http://localhost:8091/Bookee/login.jsp';");
+		    writer.println("</script>");
+		}
+		
+		
 	}
 
 }
