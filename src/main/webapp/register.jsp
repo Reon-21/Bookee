@@ -26,7 +26,9 @@ body {
 h1 {
 	font-weight: bold;
 	margin: 20px;
+	font-size: 35px;
 }
+
 
 h2 {
 	text-align: center;
@@ -44,48 +46,22 @@ span {
 	font-size: 12px;
 }
 
-a {
-	color: rgb(210, 95, 220);
-	font-size: 11px;
+#Forgot {
+	background: -webkit-linear-gradient(#FF4B2B, #FF416C);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-size: 12px;
 	text-decoration: none;
+	margin-right: -155px;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	
 }
 
-#registerButton {
-	background: linear-gradient(to right, #FF4B2B, #FF416C)!important;
-    color: white !important;
-    box-shadow: none !important;
-    border-radius: 20px;
-    border: 2px solid #FFFFFF;
-      background: white;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    margin-top: 20px;
-}
-
-#registerButton:active {
-	transform: scale(0.95);
-}
-
-#registerButton:focus {
-	outline: none;
-}
-
-#registerButton.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
-}
-
-#buttonLogin {
+#buttonSignin {
 	border-radius: 20px;
 	border: 2px solid #FFFFFF;
-	background: white;
+  	background: white;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -95,15 +71,44 @@ a {
 	transition: transform 80ms ease-in;
 }
 
-#buttonLogin:active {
+#buttonSignin:active {
 	transform: scale(0.95);
 }
 
-#buttonLogin:focus {
+#buttonSignin:focus {
 	outline: none;
 }
 
-#buttonLogin.ghost {
+#buttonSignin.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+#buttonSignup {
+ 	background: linear-gradient(to right, #FF4B2B, #FF416C)!important;
+    color: white !important;
+    box-shadow: none !important;
+	border-radius: 20px;
+	border: 2px solid #FFFFFF;
+  	background: white;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#buttonSignup:active {
+	transform: scale(0.95);
+}
+
+#buttonSignup:focus {
+	outline: none;
+}
+
+#buttonSignup.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
@@ -127,16 +132,28 @@ input {
 	width: 100%;
 }
 
+input,
+input::placeholder {
+    font-size: 15px;
+}
+
+select {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
 .container {
 	background-color: #fff;
 	border-radius: 10px;
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px,
-		rgba(0, 0, 0, 0.22);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px, rgba(0, 0, 0, 0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
-	min-height: 600px;
+	min-height: 480px;
 }
 
 .form-container {
@@ -146,70 +163,28 @@ input {
 	transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+.sign-up-container {
 	left: 0;
 	width: 50%;
 	z-index: 2;
-}
-
-.container.right-panel-active .sign-in-container {
-	transform: translateX(100%);
 }
 
 .container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
 }
 
-@
-keyframes show { 0%, 49.99% {
-	opacity: 0;
-	z-index: 1;
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
 }
 
-50
-
-
-
-
-%
-,
-100
-
-
-
-
-%
-{
-opacity
-
-
-
-
-:
-
-
-
-
-1
-
-
-;
-z-index
-
-
-
-
-:
-
-
-
-
-5
-
-
-;
-}
-}
 .overlay-container {
 	position: absolute;
 	top: 0;
@@ -240,6 +215,7 @@ z-index
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
+
 
 .overlay-panel {
 	position: absolute;
@@ -309,251 +285,44 @@ footer i {
 }
 
 footer a {
-	color: #3c97bf;
-	text-decoration: none;
+    color: #3c97bf;
+    text-decoration: none;
 }
 
-.errors {
+.errors{
 	color: red;
 }
-background
 
-
-
-
-:
-
-
- 
-
-
-#FF416C
-
-
-
-
-;
-background
-
-
-
-
-:
-
-
- 
-
-
--webk
-
-
-
-
-...
-by
-
-
- 
-
-
-CHEW
-
-
- 
-
-
-ZHENG
-
-
- 
-
-
-HUI
-
-
-
-
-
-
-CHEW
-
-
- 
-
-
-ZHENG
-
-
- 
-
-
-HUI2
-
-
-
-
-:
-
-
-
-
-45
-
-
- 
-
-
-pm
-
-
-
-
-
-
-background
-
-
-
-
-:
-
-
- 
-
-
-#FF416C
-
-
-
-
-;
-background
-
-
-
-
-:
-
-
- 
-
-
--webkit-linear-gradient
-
-
-
-
-(
-
-
-
-
-to
-
-
- 
-
-
-right
-,
-#FF4B2B
-,
-#FF416C
-
-
-
-
-)
-
-
-
-
-;
-background
-
-
-
-
-:
-
-
- 
-
-
-linear-gradient
-
-
-
-
-(
-
-
-
-
-to
-
-
- 
-
-
-right
-,
-#FF4B2B
-,
-#FF416C
-
-
-
-
-)
-
-
-
-
-;
-has
-
-
- 
-
-
-context
-
-
- 
-
-
-menu
 </style>
 </head>
 
 <body>
 	<div class="container" id="container">
-		<div class="form-container sign-in-container">
+		<div class="form-container sign-up-container">
 			<form action="RegisterServlet" method="post">
-				<h1>Sign up</h1>
-				<input type="email" name="email" placeholder="Email" size="20">
-				<input type="text" name="username" placeholder="Username" size="20" />
-				<input type="password" name="password" placeholder="Password"
-					size="20" />
-				<input type="text" name="role" placeholder="Customer/Hotel Owner" size="20">
-		<button id="registerButton" type="submit">Sign Up</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-right">
-				<h1>Hello, Welcome to Bookee!</h1>
-				<p>Already have an account?</p>
-				<a href="http://localhost:8091/Bookee/login.jsp">
-				<button class="ghost" id="buttonLogin">Sign in</button>
-				</a>
+				<h1>Sign Up</h1>
+				<input type="email" name="email" placeholder="Email"/> 
+				<input type="text" name="username" placeholder="Username"/> 
+				<input type="password" name="password" placeholder="Password"/>
+				<select name="role">
+    				<option selected value="customer">Customer</option>
+    				<option value="hotelowner">Hotel Owner</option>
+  				</select>
+				<button id="buttonSignup" type="submit" style="margin-top: 10px;">Sign Up</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Hello, Welcome To Bookee!</h1>
+					<p>Already have an account?</p>
+					<a href="http://localhost:8091/Bookee/login.jsp">
+						<button class="ghost" id="buttonSignin">Sign In</button>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	</div>
-
-
 
 </body>
 </html>
