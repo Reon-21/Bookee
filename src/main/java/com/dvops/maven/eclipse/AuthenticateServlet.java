@@ -62,7 +62,7 @@ public class AuthenticateServlet extends HttpServlet {
 			
 			if(role.equals("customer")) {
 				writer.println("<script type=\"text/javascript\">");
-			    writer.println("window.location.href = 'http://localhost:8091/Bookee/hotels.jsp';");
+			    writer.println("window.location.href = 'http://localhost:8091/Bookee/UserProfile.jsp';");
 			    writer.println("</script>");
 			}
 			else if (role.equals("hotelowner")) {

@@ -122,102 +122,97 @@ body {
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center">
-  <a class="navbar-brand d-flex w-50 mr-auto"><img src= "images/BookeeLogo.png" style="max-width: 100%; width: 160px;"></a>
+  <a href="index.jsp" class="navbar-brand d-flex w-50 mr-auto"><img src="images/BookeeLogo.png" alt="Bookee Logo" style="max-width: 100%; width: 160px;"></a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
       <span class="navbar-toggler-icon"></span>
   </button>
+  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
       <ul class="navbar-nav w-100 justify-content-center">
           <li class="nav-item">
-              <a class="nav-link">Hotels</a>
+              <a class="nav-link" href="#">Hotels</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link">Dashboard</a>
+              <a class="nav-link" href="#">Dashboard</a>
           </li>
       </ul>
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" class="rounded-circle">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        	</a>
+        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="http://localhost:8091/Bookee/UserProfile.jsp">Edit Profile</a>
           <a class="dropdown-item" href="http://localhost:8091/Bookee/index.jsp">Log Out</a>
         </div>
-      </li>   
-    </ul>
-  </div>
+        </li>
           <li class="nav-item">
-          	<a href="http://localhost:8091/Bookee/login.jsp">
-            <button type="button" class="btn btn-outline-dark" style="margin-right: 10px;">Login</button>
-             </a>
+            <a href="login.jsp"><button type="button" class="btn btn-outline-dark" style="margin-right: 10px;">Sign In</button></a>
           </li>
           <li class="nav-item">
-          		<a href="http://localhost:8091/Bookee/register.jsp">
-            <button type="button" class="btn btn-dark">Sign up</button>
-            </a>
+            <a href="register.jsp"><button type="button" class="btn btn-dark">Sign Up</button></a>
           </li>
       </ul>
   </div>
 </nav>
-	<div class="container">
-		<div class="main-body">
-			<div class="row gutters-sm">
-				<div class="col-md-4 mb-3">
-					<div class="card">
-						<div class="card-bodyProfile">
-							<div class="d-flex flex-column align-items-center text-center">
-								<div style="position: relative;">
-								<div style= "background-image: linear-gradient(to right, rgba(255,75,43,1), rgba(255,65,108,1)); width: 35px; height: 35px; position: absolute; bottom: 0; margin-left: 100px; border-radius: 25px;">
+<div class="container">
+<form>
+	<div class="main-body">
+		<div class="row gutter-sm">
+			<div class="col-md-4 mb-3">
+				<div class="card">
+					<div class="card-bodyProfile">
+						<div class="d-flex flex-column align-items-center text-center">
+							<div style="position: relative">
+								<div style="background-image: linear-gradient(to right, rgba(255,75,43,1), rgba(255,65,108,1)); width: 35px; height: 35px; position: absolute; bottom: 0; margin-left: 100px; border-radius: 25px;">
 									<img src ="images/pencil.png" style="max-width: 100%; height: 16px; margin-top: 5px;">
 								</div>
 								<img src="https://www.nicepng.com/png/detail/115-1150821_default-avatar-comments-sign-in-icon-png.png" alt="Admin" style="margin-top: 50px; width: 150px; display: block; border-radius: 100px;"/>
-									</div>
-									<div class="mt-3">
+							</div>
+							<div class="mt-3">
 									<h4>John Doe</h4>
 									<p class="text-secondary mb-1">Hotel Owner</p>
 							 		<button type="button" class="delete-button"  data-toggle="modal" data-target="#exampleModal"> Delete Account </button>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-8">
-					<div class="card mb-3">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-sm-3">
-									<h6 class="mb-0">Name</h6>
-								</div>
-								 <div class="col-md-5"><input type="text" class="form-control" placeholder="John" value="">
-								 </div>
-							</div>
-							<hr>
-							<div class="row">
-								<div class="col-sm-3">
-									<h6 class="mb-0">Email</h6>
-								</div>
-								  <div class="col-md-5"><input type="text" class="form-control" value="" placeholder="John@gmail.com"></div>
-							</div>
-							<hr>
-							<div class="row">
-								<div class="col-sm-3">
-									<h6 class="mb-0">Password</h6>
-								</div>
-								<div class="col-md-5"><input type="text" class="form-control" placeholder="*******" value=""></div>
-							</div>
-							<hr>
-							<div class="row">
-								<div class="col-sm-3">
-									<h6 class="mb-0">Address</h6>
-								</div>
-								 <div class="col-md-5"><input type="text" class="form-control" value="" placeholder="Address"></div>
-							</div>
-							<hr>
-							<div class="row">
-								<button type="button" class="btn btn-success" style="margin-left: 300px; margin-top: 1px; text-align: center; ">Update profile</button>
-								</div>
-							</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="card mb-3">
+				<div class="card-body">
+					<div class="row justify-content-center" style="margin-top: 50px;">
+						<div class="col-md-5">
+						<label for="username">Username</label>
+						<input type="text" name="username" class="form-control" placeholder="Username">
+						</div>
+						<div class="col-md-5">
+						<label for="email">E-mail</label>
+						<input type="email" name="email" class="form-control" placeholder="E-mail">
+						</div>
+					</div>
+					<div class="row justify-content-center" style="margin-top: 25px; padding-bottom: 149px; margin-left: -15px;">
+						<div class="col-md-10">
+						<label for="address">Address</label>
+						<input type="text" name="address" class="form-control" placeholder="Address">
+						</div>
+					</div>
+					<div class="row justify-content-center" style="margin-top: -80px;">
+						<div class="col-md-12">
+						<hr>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-10">
+						<button class="btn btn-success btn-block">Update Profile</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+</form>		
+</div>
 </body>
 </html>
