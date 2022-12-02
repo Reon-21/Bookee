@@ -74,7 +74,7 @@ form {
 <body>
 	<div class="form-container sign-in-container">
 		<form action="ResetPasswordServlet" method="post">
-			<img src="https://cdn-icons-png.flaticon.com/512/1828/1828398.png"
+			<img src="https://cdn-icons-png.flaticon.com/512/4516/4516580.png"
 				width="230" height="230">
 			<h1>Password reset</h1>
 			<p>An email token has been sent! Check your email!</p>
