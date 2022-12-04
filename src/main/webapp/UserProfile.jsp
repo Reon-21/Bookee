@@ -150,7 +150,7 @@ body {
 </nav>
 <div class="container">
 <%User loggedInUser = (User)session.getAttribute("loggedInUser"); %>
-<form action="UserServlet" method="post">
+
 	<div class="main-body">
 		<div class="row gutter-sm">
 			<div class="col-md-4 mb-3">
@@ -165,9 +165,9 @@ body {
 									<h3><%=loggedInUser.getUsername()%></h3>
 									<p><%=loggedInUser.getGender()%></p>
 									<p class="text-secondary mb-1"></p>
-									<a href="http://localhost:8091/Bookee/login.jsp">
-									<button type="button" class="logout-button">Log out</button>
-									</a>
+									<form action="LogoutServlet" method = "post">
+									<button type="submit" class="logout-button"> Log out </button>
+									</form>
 						</div>
 					</div>
 				</div>
@@ -175,6 +175,7 @@ body {
 		</div>
 		<div class="col-md-8">
 			<div class="card mb-3">
+			<form action="UserServlet" method="post">
 				<div class="card-body">
 
 					<div class="row justify-content-center" style="margin-top: 50px;">
@@ -204,11 +205,11 @@ body {
 						</div>
 					</div>
 				</div>
+				</form>	
 			</div>
 		</div>
 		</div>
-		</div>
-</form>		
+		</div>	
 </div>
 </body>
 </html>
