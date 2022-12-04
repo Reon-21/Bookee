@@ -1,8 +1,10 @@
 package com.dvops.maven.eclipse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,30 +31,46 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		
-		String username = "hh";
 	
-		ArrayList<User> registeredUserList = (ArrayList)session.getAttribute("users");
-		
-		for(int i = 0; i < registeredUserList.size(); i++) {
-			if(registeredUserList.get(i).getEmail() == session.getAttribute("loggedInEmail")) {
-				username = registeredUserList.get(i).getUsername().toString();
-				System.out.println(username);
-				
-			}
-		}
-		
-		
-		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
+		PrintWriter writer = response.getWriter();
+		
+		String username = request.getParameter("username");
+		String address = request.getParameter("address");
+		String email = request.getParameter("email");
+		String gender = request.getParameter("gender");
+			
+		User loggedInUser = (User)session.getAttribute("loggedInUser");
+		ArrayList<User> registeredUserList = (ArrayList)session.getAttribute("users");
+		
+		loggedInUser.setUsername(username);
+		loggedInUser.setAddress(address);
+		
+		
+		for(int i=0; i < registeredUserList.size(); i++) {
+			if(registeredUserList.get(i).getEmail().equals(email)) {
+				registeredUserList.set(i, loggedInUser);
+				session.setAttribute("users", registeredUserList);
+				ArrayList<User> newregisteredUserList = (ArrayList)session.getAttribute("users");
+			}
+			else {
+				writer.println("<script type=\"text/javascript\">");
+				writer.println("window.location.href = 'http://localhost:8091/Bookee/UserProfile.jsp';");
+			    writer.println("alert('Account has been updated successfully!');");
+			    writer.println("</script>");
+			}
+		}
+		
+		
 		doGet(request, response);
+		
+		
 	}
 
 }

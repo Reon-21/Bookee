@@ -304,9 +304,9 @@ footer a {
 				<input type="email" name="email" placeholder="Email"/> 
 				<input type="text" name="username" placeholder="Username"/> 
 				<input type="password" name="password" placeholder="Password"/>
-				<select name="role">
-    				<option selected value="customer">Customer</option>
-    				<option value="hotelowner">Hotel Owner</option>
+				<select name="gender">
+    				<option selected value="Male">Male</option>
+    				<option value="Female">Female</option>
   				</select>
 				<button id="buttonSignup" type="submit" style="margin-top: 10px;">Sign Up</button>
 			</form>

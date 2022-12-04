@@ -5,15 +5,15 @@ public class User {
 	private String email;
 	private String username;
 	private String password;
-	private String role;
+	private String gender;
 	private String address;
 	
-	public User(String profilePicture, String email, String username, String password, String role, String address) {
+	public User(String profilePicture, String email, String username, String password, String gender, String address) {
 		this.profilePicture = profilePicture;
 		this.email = email;
 		this.username = username;
 		this.password = password;
-		this.role = role;
+		this.gender = gender;
 		this.address = address;
 	}
 	
@@ -34,11 +34,27 @@ public class User {
 		return password;
 	}
 	
-	public String getRole() {
-		return role;
+	public String getGender() {
+		return gender;
 	}
 	
 	public String getAddress() {
 		return address;
+	}
+	
+	public void setProfilePicture(String newProfilePicture) {
+		this.profilePicture = newProfilePicture;
+	}
+	
+	public void setUsername(String newUsername) {
+		this.username = newUsername;
+	}
+	
+	public void setPassword(String newPassword) {
+		this.password = newPassword;
+	}
+	
+	public void setAddress(String newAddress) {
+		this.address = newAddress;
 	}
 }
