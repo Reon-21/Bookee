@@ -41,7 +41,7 @@ public class AuthenticateServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		String role = "";
+		String gender = "";
 		
 		HttpSession session = request.getSession();
 		PrintWriter writer = response.getWriter();
@@ -51,26 +51,17 @@ public class AuthenticateServlet extends HttpServlet {
 		for(int i = 0; i < registeredUserList.size(); i++) {
 			if(registeredUserList.get(i).getEmail().toString().equals(email) && registeredUserList.get(i).getPassword().toString().equals(password)) {
 				login = true;
-				role = registeredUserList.get(i).getRole().toString();
+				gender = registeredUserList.get(i).getGender().toString();
+				User loggedInUser = registeredUserList.get(i);
+				session.setAttribute("loggedInUser", loggedInUser);
 				break;
 			}
 		}
 		
 		if(login) {
-			session.setAttribute("loggedInEmail", email.toString());
-			session.setAttribute("loggedInRole", role.toString());
-			
-			if(role.equals("customer")) {
-				writer.println("<script type=\"text/javascript\">");
-			    writer.println("window.location.href = 'http://localhost:8091/Bookee/hotels.jsp';");
-			    writer.println("</script>");
-			}
-			else if (role.equals("hotelowner")) {
-				writer.println("<script type=\"text/javascript\">");
-			    writer.println("window.location.href = 'http://localhost:8091/Bookee/dashboard.jsp';");
-			    writer.println("</script>");
-			}
-			
+			writer.println("<script type=\"text/javascript\">");
+		    writer.println("window.location.href = 'http://localhost:8091/Bookee/hotels.jsp';");
+		    writer.println("</script>");
 		}
 		else {
 			writer.println("<script type=\"text/javascript\">");

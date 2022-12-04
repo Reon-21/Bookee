@@ -45,16 +45,16 @@ public class RegisterServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		String role = request.getParameter("role");
+		String gender = request.getParameter("gender");
 		String address = "";
 	
-		if(email.isEmpty() || username.isEmpty()|| password.isEmpty() || role.isEmpty()) {
+		if(email.isEmpty() || username.isEmpty()|| password.isEmpty() || gender.isEmpty()) {
 			RequestDispatcher req = request.getRequestDispatcher("register.jsp");
 			req.include(request, response);
 		}else {
 			PrintWriter writer = response.getWriter();
 			HttpSession session = request.getSession();
-			User newUser = new User(profilePicture, email, username, password, role, address);
+			User newUser = new User(profilePicture, email, username, password, gender, address);
 			
 			if(session.getAttribute("users") == null) {
 				ArrayList<User> listOfUser = new ArrayList<User>(); 
