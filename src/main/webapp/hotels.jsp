@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
  <%@page import="com.dvops.maven.eclipse.HotelCollection" %>
-  <%@page import="com.dvops.maven.eclipse.Hotel" %>
+ <%@page import="com.dvops.maven.eclipse.Hotel" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,27 +22,25 @@
 	<div class="row justify-content-left" style="margin-top: 400px; position: relative; margin-left: 100px;">
 		<h2>Available Hotel Rooms</h2>
 	</div>
-	
-	
 	<div class="row justify-content-left" style="margin-top: 50px; position: relative; margin-left: 60px; padding-bottom: 100px;">
 		<% HotelCollection hotelCollection = new HotelCollection();%>
 		<% Hotel[] allHotelList = hotelCollection.getAllHotels(); %>
 		<% for(int i = 0; i < allHotelList.length; i++){%>
 			<div class="card" style="width: 18rem; border-radius: 30px; margin-left: 30px;">
-  			<img class="card-img-top" src="<%=allHotelList[i].getHotelImage()%>" style="height: 250px; object-fit: cover; border-top-right-radius:30px; border-top-left-radius:30px;" alt="Card image cap">
+  			<img class="card-img-top" src="<%=allHotelList[i].getHotelImage()%>" style="height: 250px; object-fit: cover; border-top-right-radius:30px; border-top-left-radius:30px;" alt="hotel image">
   			<div class="card-body">
     		<h5 class="card-title"><%=allHotelList[i].getHotelName()%></h5>
     		<p class="card-text"><i class="fi fi-rr-bed"></i> <%=allHotelList[i].getRoomBeds()%></p>
     		<p class="card-text"><i class="fi fi-rs-marker"></i> <%=allHotelList[i].getHotelAddress()%></p>
     		<br>
-    		<a href="#" class="btn btn-dark">More Details</a>   	
+    		<form action="SpecificHotelServlet" method="post">
+    			<input type="hidden" name="id" value="<%=allHotelList[i].getId()%>">
+    			<button class="btn btn-dark" type="submit">More Details</button>
+    		</form>	
   		</div>
 		</div>
 		<%}%>
 	</div>
 </div>
-
-
-
 </body>
 </html>

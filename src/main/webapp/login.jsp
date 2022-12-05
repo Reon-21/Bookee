@@ -293,7 +293,7 @@ footer a {
 				 <input type="email" name="email" placeholder = "E-mail" size="20" /> 
 				 <input type="password" name="password" placeholder = "Password" size="20" />
 				  <a id ="Forgot" href="#">Forgot your password?</a>
-				<button id="buttonLogin" type="submit"></a>Sign In</button>
+				<button id="buttonLogin" type="submit">Sign In</button>
 			</form>
 		</div>
 		<div class="overlay-container">
