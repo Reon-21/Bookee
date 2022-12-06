@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="32x32">
 <title>Insert title here</title>
 <style>
 body {
