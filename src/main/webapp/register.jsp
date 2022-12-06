@@ -6,7 +6,8 @@
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <meta charset="ISO-8859-1">
-<title>Bookee</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="32x32">
+<title>Register</title>
 <style>
 * {
 	box-sizing: border-box;

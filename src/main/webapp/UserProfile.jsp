@@ -4,13 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="32x32">
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <meta charset="ISO-8859-1">
 <title>User Profile</title>
 <style>
+
 body {
 	background-color: #e2e8f0;
 }
@@ -118,7 +120,6 @@ body {
 
 
 
-
 </style>
 </head>
 <body>
@@ -142,7 +143,9 @@ body {
         	</a>
         	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="http://localhost:8091/Bookee/UserProfile.jsp">Edit Profile</a>
-          <a class="dropdown-item" href="http://localhost:8091/Bookee/login.jsp">Log Out</a>
+          <form action="LogoutServlet" method = "post">
+          <a class="dropdown-item" type="submit" href="http://localhost:8091/Bookee/login.jsp">Log Out</a>
+          	</form>
         </div>
         </li>
       </ul>
