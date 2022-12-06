@@ -4,9 +4,9 @@ public class Booking {
 	String startDate;
 	String endDate;
 	String bookerEmail;
-	String hotelId;
+	int hotelId;
 	
-	public Booking(String startDate, String endDate, String bookerEmail, String hotelId) {
+	public Booking(String startDate, String endDate, String bookerEmail, int hotelId) {
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.bookerEmail = bookerEmail;
@@ -25,7 +25,7 @@ public class Booking {
 		return bookerEmail;
 	}
 	
-	public String getHotelId() {
+	public int getHotelId() {
 		return hotelId;
 	}
 }
