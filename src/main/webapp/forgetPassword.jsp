@@ -74,7 +74,6 @@ form {
 <body>
 	<div class="container" id="container">
 		<div class="form-container sign-in-container">
-
 			<form action="ForgetPasswordServlet" method="post">
 				<img src="https://cdn-icons-png.flaticon.com/512/5020/5020867.png"
 					width="230" height="230">
