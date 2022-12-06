@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="com.dvops.maven.eclipse.HotelCollection" %>
- <%@page import="com.dvops.maven.eclipse.Hotel" %>
+<%@page import="com.dvops.maven.eclipse.Hotel" %>
+<%@page import="com.dvops.maven.eclipse.Booking" %>
+<%@page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -76,6 +78,57 @@
 			</div>
 			</div>
 		</div>
-	</div>
+		<div class="row justify-content-left" style="margin-left: 0px;">
+		<div class="alert alert-warning">
+				<i class="fi fi-rr-bulb"></i> Our booking system runs on a first come first serve basis please ensure the dates that you have chosen has not been taken!
+			</div>
+		</div>
+		<div class="row justify-content-left" style="margin-left: 0px;">
+			<h1>Make A Booking</h1>
+		</div>
+		<br>
+		<div class="row justify-content-left" style="margin-left: 0px; padding-bottom: 50px;">
+			<form action="BookingServlet" method="post">
+			<div class="row justify-content-left" style="margin-left: -13px; width: 1000px;">
+				<div class="col-md-6">
+				<label for="startdate">Start</label>
+				<input type="text" class="form-control"name="startdate" placeholder="DD/MM/YYYY">
+				</div>
+				<div class="col-md-6">
+					<label for="enddate">End</label>
+				<input type="text" class="form-control"name="enddate" placeholder="DD/MM/YYYY">
+				</div>
+				<input type="hidden" name="hoteId" value="<%=hotelId%>">
+			</div>
+			<br>
+			<div class="row justify-content-left" style="margin-left: 2px;">
+				<button class="btn btn-success" type="submit">Submit Booking</button>
+			</div>
+			</form>
+		</div>
+		<br>
+		<div class="row justify-content-left" style="margin-left: 0px;">
+		<div class="alert alert-info">
+				<i class="fi fi-rr-exit"></i> Please provide your email when you are checking in into the hotel
+			</div>
+		</div>
+		<h1>Slots Taken</h1>
+		<br>
+		<% 
+			ArrayList<Booking> existingBooking = (ArrayList)session.getAttribute("bookingList");
+		
+			for(int i = 0; i < existingBooking.size(); i++){
+				if(existingBooking.get(i).getHotelId() == hotelId){
+		%>
+		<div class="card" style="margin-bottom: 20px;">
+			<div class="card-body">
+				<div class="row justify-content-center">
+				<p style="font-weight: bold; font-style: italic;"><%=existingBooking.get(i).getStartDate()%> to <%=existingBooking.get(i).getEndDate()%></p>
+				</div>
+			</div>
+		</div>
+		<%}}%>
+		
+</div>		
 </body>
 </html>
