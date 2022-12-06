@@ -107,6 +107,27 @@
 			</form>
 		</div>
 		<br>
+		<div class="row justify-content-left" style="margin-left: 0px;">
+		<div class="alert alert-info">
+				<i class="fi fi-rr-exit"></i> Please provide your email when you are checking in into the hotel
+			</div>
+		</div>
+		<h1>Slots Taken</h1>
+		<br>
+		<% 
+			ArrayList<Booking> existingBooking = (ArrayList)session.getAttribute("bookingList");
+		
+			for(int i = 0; i < existingBooking.size(); i++){
+				if(existingBooking.get(i).getHotelId() == hotelId){
+		%>
+		<div class="card" style="margin-bottom: 20px;">
+			<div class="card-body">
+				<div class="row justify-content-center">
+				<p style="font-weight: bold; font-style: italic;"><%=existingBooking.get(i).getStartDate()%> to <%=existingBooking.get(i).getEndDate()%></p>
+				</div>
+			</div>
+		</div>
+		<%}}%>
 		
 </div>		
 </body>
