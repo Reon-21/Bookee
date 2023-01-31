@@ -300,7 +300,7 @@ footer a {
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
-					<h1>Welcome back to Bookee!</h1>
+					<h1>Welcome back to Bookee, friend!</h1>
 					<p>Don't have a Bookee account yet?</p>
 					<a href="http://localhost:8091/Bookee/register.jsp">
 					<button class="ghost" id="buttonSignup">Sign Up</button>
