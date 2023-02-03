@@ -317,7 +317,7 @@ footer a {
 				<div class="overlay-panel overlay-right">
 					<h1>Hello, Welcome To Bookee!</h1>
 					<p>Already have an account?</p>
-					<a href="http://localhost:8091/Bookee/login.jsp">
+					<a href="http://localhost:8091/DevOps-Project/login.jsp">
 						<button class="ghost" id="buttonSignin">Sign In</button>
 					</a>
 				</div>

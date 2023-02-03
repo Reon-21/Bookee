@@ -293,7 +293,7 @@ footer a {
 				<h1>Sign in</h1>
 				 <input type="email" name="email" placeholder = "E-mail" size="20" /> 
 				 <input type="password" name="password" placeholder = "Password" size="20" />
-				  <a id ="Forgot" href="http://localhost:8091/Bookee/forgetPassword.jsp">Forgot your password?</a>
+				  <a id ="Forgot" href="http://localhost:8091/DevOps-Project/forgetPassword.jsp">Forgot your password?</a>
 				<button id="buttonLogin" type="submit">Sign In</button>
 			</form>
 		</div>
@@ -302,7 +302,7 @@ footer a {
 				<div class="overlay-panel overlay-right">
 					<h1>Welcome back to Bookee, friend! Testing CI/CD/CD Pipeline</h1>
 					<p>Don't have a Bookee account yet?</p>
-					<a href="http://localhost:8091/Bookee/register.jsp">
+					<a href="http://localhost:8091/DevOps-Project/register.jsp">
 					<button class="ghost" id="buttonSignup">Sign Up</button>
 					</a>
 				</div>

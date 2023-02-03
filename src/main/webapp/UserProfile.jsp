@@ -142,9 +142,9 @@ body {
 " class="rounded-circle">
         	</a>
         	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="http://localhost:8091/Bookee/UserProfile.jsp">Edit Profile</a>
+          <a class="dropdown-item" href="http://localhost:8091/DevOps-Project/UserProfile.jsp">Edit Profile</a>
           <form action="LogoutServlet" method = "post">
-          <a class="dropdown-item" type="submit" href="http://localhost:8091/Bookee/login.jsp">Log Out</a>
+          <a class="dropdown-item" type="submit" href="http://localhost:8091/DevOps-Project/login.jsp">Log Out</a>
           	</form>
         </div>
         </li>

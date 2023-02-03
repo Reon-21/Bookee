@@ -82,7 +82,7 @@ form {
 				<p>You can reset password here.</p>
 				<input type="email" name="email" placeholder="Email" size="20" /><br>
 				<button class="ghost" id="buttonReset" type="submit"
-					href="http://localhost:8091/Bookee/resetPassword.jsp">
+					href="http://localhost:8091/DevOps-Project/resetPassword.jsp">
 					<a>Send OTP</a>
 				</button>
 			</form>
