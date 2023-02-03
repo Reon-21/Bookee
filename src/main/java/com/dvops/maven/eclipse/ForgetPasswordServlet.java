@@ -59,13 +59,13 @@ public class ForgetPasswordServlet extends HttpServlet {
 				if (existingUserList.get(i).getEmail().toString().equals(email)) {
 
 					writer.println("<script type=\"text/javascript\">");
-					writer.println("window.location.href = 'http://localhost:8091/Bookee/resetPassword.jsp';");
+					writer.println("window.location.href = 'http://localhost:8091/DevOps-Project/resetPassword.jsp';");
 					writer.println("</script>");
 					break;
 				}else {
 					writer.println("<script type=\"text/javascript\">");
 				    writer.println("alert('The e-mail provided is not linked to any account');");
-				    writer.println("window.location.href = 'http://localhost:8091/Bookee/forgetPassword.jsp';");
+				    writer.println("window.location.href = 'http://localhost:8091/DevOps-Project/forgetPassword.jsp';");
 				    writer.println("</script>");
 				    
 				}

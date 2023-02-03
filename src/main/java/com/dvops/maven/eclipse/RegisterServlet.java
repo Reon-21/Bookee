@@ -63,7 +63,7 @@ public class RegisterServlet extends HttpServlet {
 				writer.println("<div style='margin-top: 110px; margin-left: auto; margin-right: auto; width: 50%; height: 50%; display:block; text-align:center;'>");
 				writer.println("<img style='width: 212px; height: 212px;'; src='images/crab.png'>");
 				writer.println("<h2 style='font-family: Montserrat, sans-serif; margin-top: 30px;'>Your Account Has Been Registered Successfully!</h2>");
-				writer.println("<button type='button' onclick=location.href='http://localhost:8091/Bookee/login.jsp'; style='margin-top: 30px; background: linear-gradient(to right, #FF4B2B, #FF416C)!important; color: white !important; box-shadow: none !important; border-radius: 20px; border: 2px solid #FFFFFF; padding: 12px 45px; font-size: 12px; font-weight: bold; padding: 12px 45px;'>GO TO LOGIN</button>");
+				writer.println("<button type='button' onclick=location.href='http://localhost:8091/DevOps-Project/login.jsp'; style='margin-top: 30px; background: linear-gradient(to right, #FF4B2B, #FF416C)!important; color: white !important; box-shadow: none !important; border-radius: 20px; border: 2px solid #FFFFFF; padding: 12px 45px; font-size: 12px; font-weight: bold; padding: 12px 45px;'>GO TO LOGIN</button>");
 				writer.println("</div>");
 			}
 			else {
@@ -74,7 +74,7 @@ public class RegisterServlet extends HttpServlet {
 						addUser = false;
 						writer.println("<script type=\"text/javascript\">");
 					    writer.println("alert('The e-mail provided is already in use!');");
-					    writer.println("window.location.href = 'http://localhost:8091/Bookee/register.jsp';");
+					    writer.println("window.location.href = 'http://localhost:8091/DevOps-Project/register.jsp';");
 					    writer.println("</script>");
 						break;
 					}	
@@ -85,7 +85,7 @@ public class RegisterServlet extends HttpServlet {
 					writer.println("<div style='margin-top: 110px; margin-left: auto; margin-right: auto; width: 50%; height: 50%; display:block; text-align:center;'>");
 					writer.println("<img style='width: 212px; height: 212px;'; src='images/crab.png'>");
 					writer.println("<h2 style='font-family: Montserrat, sans-serif; margin-top: 30px;'>Your Account Has Been Registered Successfully!</h2>");
-					writer.println("<button type='button' onclick=location.href='http://localhost:8091/Bookee/login.jsp'; style='margin-top: 30px; background: linear-gradient(to right, #FF4B2B, #FF416C)!important; color: white !important; box-shadow: none !important; border-radius: 20px; border: 2px solid #FFFFFF; padding: 12px 45px; font-size: 12px; font-weight: bold; padding: 12px 45px;'>GO TO LOGIN</button>");
+					writer.println("<button type='button' onclick=location.href='http://localhost:8091/DevOps-Project/login.jsp'; style='margin-top: 30px; background: linear-gradient(to right, #FF4B2B, #FF416C)!important; color: white !important; box-shadow: none !important; border-radius: 20px; border: 2px solid #FFFFFF; padding: 12px 45px; font-size: 12px; font-weight: bold; padding: 12px 45px;'>GO TO LOGIN</button>");
 					writer.println("</div>");
 				}
 				

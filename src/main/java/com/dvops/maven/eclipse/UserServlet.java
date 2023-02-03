@@ -61,7 +61,7 @@ public class UserServlet extends HttpServlet {
 			}
 			else {
 				writer.println("<script type=\"text/javascript\">");
-				writer.println("window.location.href = 'http://localhost:8091/Bookee/UserProfile.jsp';");
+				writer.println("window.location.href = 'http://localhost:8091/DevOps-Project/UserProfile.jsp';");
 			    writer.println("alert('Account has been updated successfully!');");
 			    writer.println("</script>");
 			}
